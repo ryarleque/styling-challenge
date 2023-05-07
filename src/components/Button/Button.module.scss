@@ -1,0 +1,63 @@
+@import '../../assets/colors';
+@import '../../assets/mixins.scss';
+
+.button {
+    padding: 23px 33px;
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    color: $secondary-color;
+    background: $principal-color;
+    border: none;
+    border-radius: 70px;
+    height: 70px;
+    width: 310px;
+    justify-content: center;
+    transition: all 0.5s ease-in-out 0s;
+
+    @include devices(tablet) {
+        font-size: 16px;
+    }
+
+    @include devices(desktop) {
+        font-size: 19px;
+    }
+
+    &:disabled {
+        &:hover {
+            background: $gray-color;
+            cursor: none;
+        }
+
+        background: $gray-color;
+        cursor: none;
+    }
+}
+
+.defaultButtonType {
+    @extend .button;
+
+    div {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+.iconButtonType {
+    @extend .button;
+
+    div {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        margin-left: 16px;
+    }
+}

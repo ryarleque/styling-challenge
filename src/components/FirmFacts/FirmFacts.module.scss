@@ -1,0 +1,64 @@
+@import '../../assets/colors';
+@import '../../assets/mixins.scss';
+
+.container {
+    color: $secondary-color;
+    font-family: 'Open Sans';
+    margin: 0 auto;
+    padding: 100px 16px 16px 16px;
+
+    @include devices(tablet) {
+        padding: 100px 20px 25px 20px;
+        max-width: 1510px;
+        min-width: 768px;
+    }
+
+    @include devices(desktop) {
+        padding: 100px 20px 20px 20px;
+    }
+
+}
+
+.title {
+    color: $secondary-color;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    margin: 0;
+    padding-bottom: 22px;
+    mix-blend-mode: normal;
+    border-bottom: 1px solid color(srgb 1 1 1 / 0.20);
+    margin-bottom: 51px;
+    transition: all 0.5s ease-in-out 0s;
+
+    @include devices(tablet) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    @include devices(desktop) {
+        font-size: 60px;
+        line-height: 66px;
+    }
+}
+
+.cardsLayout {
+    display: grid;
+    grid-template: repeat(8, 13rem) / repeat(1, 1fr);
+    gap: 18px;
+    justify-content: center;
+    transition: all 0.5s ease-in-out 0s;
+
+    @include devices(tablet) {
+        grid-template: repeat(4, 322px) / repeat(2, 1fr);
+    }
+
+    @include devices(desktop) {
+        grid-template: repeat(2, 322px) / repeat(3, 1fr);
+    }
+
+    @include devices(monitor) {
+        grid-template: repeat(2, 322px) / repeat(4, 1fr);
+    }
+}

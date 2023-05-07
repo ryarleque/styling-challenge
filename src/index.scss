@@ -1,0 +1,15 @@
+@import './assets/colors';
+
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url('./assets/fonts/OpenSans-Regular.ttf');
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans' sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $principal-color;
+  height: 100vh;
+}
